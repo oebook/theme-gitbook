@@ -1,12 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="{{ config.language }}" {% if page.dir == "rtl" %}dir="rtl"{% endif %}>
     <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>{% block title %}{{ config.title }} - 开源图书(OpenBook){% endblock %}</title>
         <meta name="description" content="{% block description %}{% endblock %}">
-        <meta name="generator" content="GitBook {{ gitbook.version }}">
         {% if config.author %}<meta name="author" content="{{ config.author }}">{% endif %}
         {% if config.isbn %}<meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">{% endif %}
         {% block style %}
@@ -19,6 +17,7 @@
             {% endfor %}
         {% endblock %}
         {% block head %}{% endblock %}
+        <script src="https://cdn.jsdelivr.net/gh/liuxfe/assets/main.min.js"></script>
     </head>
     <body>
         {% block body %}{% endblock %}
